@@ -19,8 +19,17 @@ public class Lights {
 			public static final int b = 3;
 		}
 	}
+	public static void start() {
+		Thread thread = new Thread() {
+			public void run() {
+				while(true) {
+					set_Lights(Car.RPM);
+				}
+			}
+		};
+		thread.start();
+	}
 	public static void set_Lights(int RPM) {
-		//setColor(Row.FRONT, (int) mafs(RPM), 0, 0);
 		
 		int[] colors = Calc.calculate(RPM);
 		int r = colors[0];
@@ -49,19 +58,19 @@ public class Lights {
 	public static void setColor(Row row, int r, int g, int b) {
 		switch(row) {
 			case FRONT:
-				System.out.println("Setting "+row+" to "+r+" "+g+" "+b);
+				//System.out.println("Setting "+row+" to "+r+" "+g+" "+b);
 				SoftPwm.softPwmWrite(sets.Front.r, r);
 				SoftPwm.softPwmWrite(sets.Front.g, g);
 				SoftPwm.softPwmWrite(sets.Front.b, b);
 				break;
 			case MIDDLE:
-				System.out.println("Setting "+row+" to "+r+" "+g+" "+b);
+				//System.out.println("Setting "+row+" to "+r+" "+g+" "+b);
 				SoftPwm.softPwmWrite(sets.Middle.r, r);
 				SoftPwm.softPwmWrite(sets.Middle.g, g);
 				SoftPwm.softPwmWrite(sets.Middle.b, b);
 				break;
 			case BACK:
-				System.out.println("Setting "+row+" to "+r+" "+g+" "+b);
+				//System.out.println("Setting "+row+" to "+r+" "+g+" "+b);
 				SoftPwm.softPwmWrite(sets.Back.r, r);
 				SoftPwm.softPwmWrite(sets.Back.g, g);
 				SoftPwm.softPwmWrite(sets.Back.b, b);
