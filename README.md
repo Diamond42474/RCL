@@ -14,9 +14,9 @@ It being in a manual car makes it fun driving at night and knowing exactly what 
 ---
 ##### Electronic Controllers:
 
-Raspberry Pi 3
+[Raspberry Pi 3](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/)
 
-OBDII (Onboard Diagnostics v2)
+[OBDII](https://en.wikipedia.org/wiki/On-board_diagnostics) (Onboard Diagnostics v2)
 
 ##### Audio / Visuals:
 
